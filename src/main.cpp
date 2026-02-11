@@ -2,7 +2,8 @@
 #include<iostream>
 
 int main(int argc,char* argv[]){
-    int port = 6379; // if we do now specify port in the command line argument we will use this
+    int port = 6379; 
+    // if we do not specify port in the command line argument we will use this
     //argc is the number of command-line-arguments
     //argv array in c-style string
     //argc is always one because on the command line its always one because we run it like this ./name.cpp so its always one

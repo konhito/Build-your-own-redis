@@ -1,0 +1,3 @@
+so the general flow is  header is for the declaration
+.cpp file is for the definatio
+Because of visibility and compilation boundaries.

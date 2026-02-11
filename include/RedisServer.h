@@ -2,6 +2,8 @@
 //.h file is the globally present blue print we can call this file and create instance
 //.h file = blueprint (what exists)
 #define REDIS_SERVER_H
+#include <string>
+#include <atomic>
 
 class RedisServer{
     public:
@@ -10,6 +12,8 @@ class RedisServer{
 
     private:
     int port;
+    int server_socket;
+    std::atomic<bool>running;
 };
 
 #endif
