@@ -3,11 +3,14 @@
 //.h file = blueprint (what exists)
 #define REDIS_SERVER_H
 #include <string>
-#include <atomic>
+#include <atomic> // holy shit its actually crazy this prevent race condition because it cannnot be interupted before it complete its things.
+//No thread can interrupt it midway.
 
 class RedisServer{
     public:
     RedisServer(int port);
+    void run();
+    void shutdown();
 
 
     private:

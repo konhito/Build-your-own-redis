@@ -1,0 +1,2 @@
+lets create a basic - Let’s make the pseudo code real: Read data from the client, write a response, that’s it.
+
