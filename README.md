@@ -37,6 +37,21 @@ Learning distributed systems by rebuilding the fundamentals.
 
 ---
 
+## Architecture
+
+High-level architecture:
+
+```mermaid
+flowchart LR
+    Client -->|TCP Request| Server
+    Server --> Parser
+    Parser --> CommandExecutor
+    CommandExecutor --> KeyValueStore
+    KeyValueStore --> Server
+    Server -->|TCP Response| Client
+```
+---
+
 ## About
 
 This project is a Redis-inspired in-memory database built from scratch.
@@ -77,33 +92,6 @@ The goal is deep systems understanding rather than using high-level abstractions
 
 ---
 
-## Architecture
 
-High-level architecture:
 
-```mermaid
-flowchart LR
-    Client -->|TCP Request| Server
-    Server --> Parser
-    Parser --> CommandExecutor
-    CommandExecutor --> KeyValueStore
-    KeyValueStore --> Server
-    Server -->|TCP Response| Client
-```
 
-#Project Structure
-Build-your-own-redis/
-│
-├── src/
-│   ├── server.cpp
-│   ├── parser.cpp
-│   ├── store.cpp
-│
-├── include/
-│   ├── server.h
-│   ├── parser.h
-│   ├── store.h
-│
-├── CMakeLists.txt
-├── README.md
-└── LICENSE
