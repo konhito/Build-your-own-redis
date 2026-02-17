@@ -1,8 +1,8 @@
 <div align="center">
 
-# 🚀 Build Your Own Redis
+# Build Your Own Redis
 
-A Redis-like in-memory key-value server built from scratch to deeply understand networking, protocol parsing, and data structures.
+A Redis-like in-memory key-value server built from scratch to understand networking, protocol parsing, and data structures.
 
 <br>
 
@@ -14,71 +14,70 @@ A Redis-like in-memory key-value server built from scratch to deeply understand 
 
 <br>
 
-> Learning distributed systems by rebuilding the fundamentals.
+Learning distributed systems by rebuilding the fundamentals.
 
 </div>
 
 ---
 
-# 📚 Table of Contents
+## Table of Contents
 
-- [📖 About](#-about)
-- [🎯 Goals](#-goals)
-- [⚙️ Features](#️-features)
-- [🏗️ Architecture](#️-architecture)
-- [🔄 Request Lifecycle](#-request-lifecycle)
-- [📂 Project Structure](#-project-structure)
-- [🚀 Getting Started](#-getting-started)
-- [🧪 Example Usage](#-example-usage)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [📈 Future Improvements](#-future-improvements)
-- [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
+- [About](#about)
+- [Goals](#goals)
+- [Features](#features)
+- [Architecture](#architecture)
+- [Request Lifecycle](#request-lifecycle)
+- [Project Structure](#project-structure)
+- [Getting Started](#getting-started)
+- [Example Usage](#example-usage)
+- [Tech Stack](#tech-stack)
+- [Future Improvements](#future-improvements)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
-# 📖 About
+## About
 
 This project is a Redis-inspired in-memory database built from scratch.
 
-Instead of using Redis, we implement:
+Instead of using Redis directly, this implementation builds:
 
-- TCP server from scratch
-- Command parsing
-- In-memory data storage
+- A TCP server
+- Command parsing logic
+- In-memory key-value storage
 - Basic Redis-style commands
-- Request/response handling
+- Request-response handling over sockets
 
-The goal is **deep systems understanding**, not just using libraries.
+The goal is deep systems understanding rather than using high-level abstractions.
 
 ---
 
-# 🎯 Goals
+## Goals
 
-- Understand how TCP servers work internally
-- Implement a request-response protocol
-- Design an efficient in-memory store
-- Explore concurrency and scaling patterns
+- Understand how TCP servers operate
+- Implement a custom request-response protocol
+- Design an efficient in-memory data structure
+- Explore concurrency patterns
 - Build intuition for distributed systems
 
 ---
 
-# ⚙️ Features
+## Features
 
 - Custom TCP server
 - Command parser
 - In-memory key-value store
-- Basic Redis-like commands:
+- Redis-like commands:
   - `SET`
   - `GET`
   - `DEL`
   - `PING`
-- Clean modular structure
-- Educational implementation
+- Modular and readable code structure
 
 ---
 
-# 🏗️ Architecture
+## Architecture
 
 High-level architecture:
 
@@ -91,3 +90,20 @@ flowchart LR
     KeyValueStore --> Server
     Server -->|TCP Response| Client
 ```
+
+#Project Structure
+Build-your-own-redis/
+│
+├── src/
+│   ├── server.cpp
+│   ├── parser.cpp
+│   ├── store.cpp
+│
+├── include/
+│   ├── server.h
+│   ├── parser.h
+│   ├── store.h
+│
+├── CMakeLists.txt
+├── README.md
+└── LICENSE
